@@ -5,7 +5,7 @@
  */
 function load_auth() {
   global $user, $privileges;
-  
+
   $user = null;
   if (isset($_SESSION['uid'])) {
     $user = sql_select("SELECT * FROM `User` WHERE `UID`='" . sql_escape($_SESSION['uid']) . "' LIMIT 1");
@@ -18,7 +18,7 @@ function load_auth() {
     }
     unset($_SESSION['uid']);
   }
-  
+
   // guest privileges
   $privileges = privileges_for_group(- 1);
 }

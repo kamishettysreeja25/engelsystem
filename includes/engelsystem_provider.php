@@ -27,6 +27,7 @@ require_once realpath(__DIR__ . '/../includes/model/UserDriverLicenses_model.php
 require_once realpath(__DIR__ . '/../includes/model/UserGroups_model.php');
 require_once realpath(__DIR__ . '/../includes/model/User_model.php');
 require_once realpath(__DIR__ . '/../includes/model/ValidationResult.php');
+require_once realpath(__DIR__ . '/../includes/model/AdminExport_model.php');
 
 require_once realpath(__DIR__ . '/../includes/view/AngelTypes_view.php');
 require_once realpath(__DIR__ . '/../includes/view/EventConfig_view.php');
@@ -83,6 +84,7 @@ require_once realpath(__DIR__ . '/../includes/pages/admin_questions.php');
 require_once realpath(__DIR__ . '/../includes/pages/admin_rooms.php');
 require_once realpath(__DIR__ . '/../includes/pages/admin_shifts.php');
 require_once realpath(__DIR__ . '/../includes/pages/admin_user.php');
+require_once realpath(__DIR__ . '/../includes/pages/admin_importexport.php');
 require_once realpath(__DIR__ . '/../includes/pages/guest_login.php');
 require_once realpath(__DIR__ . '/../includes/pages/user_messages.php');
 require_once realpath(__DIR__ . '/../includes/pages/user_myshifts.php');

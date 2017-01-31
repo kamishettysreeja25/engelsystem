@@ -107,8 +107,8 @@ INSERT INTO `GroupPrivileges` (`id`, `group_id`, `privilege_id`) VALUES
 (250, -2, 37),
 (88, -1, 1),
 (23, -1, 2),
-(24, -1, 5);
-
+(24, -1, 5),
+(212, -4, 40);
 -- --------------------------------------------------------
 
 --
@@ -265,8 +265,8 @@ INSERT INTO `Privileges` (`id`, `name`, `desc`) VALUES
 (36, 'angeltypes', 'View angeltypes'),
 (37, 'user_angeltypes', 'Join angeltypes.'),
 (38, 'shifttypes', 'Administrate shift types'),
-(39, 'admin_event_config', 'Allow editing event config');
-
+(39, 'admin_event_config', 'Allow editing event config'),
+(40, 'admin_importexport', 'Import and Export user data');
 -- --------------------------------------------------------
 
 --
@@ -670,7 +670,7 @@ ALTER TABLE `NewsComments`
 -- AUTO_INCREMENT für Tabelle `Privileges`
 --
 ALTER TABLE `Privileges`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 --
 -- AUTO_INCREMENT für Tabelle `Questions`
 --

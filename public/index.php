@@ -16,7 +16,7 @@ $free_pages = [
     'stats',
     'users',
     'user_driver_licenses',
-    'user_password_recovery' 
+    'user_password_recovery'
 ];
 
 // Gewünschte Seite/Funktion
@@ -27,10 +27,10 @@ if (! isset($_REQUEST['p'])) {
 
 if (isset($_REQUEST['p']) && preg_match("/^[a-z0-9_]*$/i", $_REQUEST['p']) && (in_array($_REQUEST['p'], $free_pages) || in_array($_REQUEST['p'], $privileges))) {
   $page = $_REQUEST['p'];
-  
+
   $title = $page;
   $content = "";
-  
+
   if ($page == "api") {
     require_once realpath(__DIR__ . '/../includes/controller/api.php');
     error("Api disabled temporily.");
@@ -138,6 +138,9 @@ if (isset($_REQUEST['p']) && preg_match("/^[a-z0-9_]*$/i", $_REQUEST['p']) && (i
   } elseif ($page == "admin_shifts") {
     $title = admin_shifts_title();
     $content = admin_shifts();
+  } elseif ($page == "admin_importexport") {
+    $title = admin_importexport_title();
+    $content = admin_importexport();
   } elseif ($page == "admin_log") {
     $title = admin_log_title();
     $content = admin_log();
@@ -172,7 +175,7 @@ echo template_render(__DIR__ . '/../templates/layout.html', [
     'faq_url' => $faq_url,
     'contact_email' => $contact_email,
     'locale' => locale(),
-    'event_info' => EventConfig_info($event_config) . '<br />' 
+    'event_info' => EventConfig_info($event_config) . '<br />'
 ]);
 
 ?>
